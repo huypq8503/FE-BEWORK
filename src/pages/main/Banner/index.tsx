@@ -1,11 +1,11 @@
 import { AiOutlineArrowRight } from "react-icons/ai"
 import SearchJobs from '../../Site/Recruit/SearchJobs';
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 const Banner = () => {
     const navigate = useNavigate();
     const [isLogin] = useState(() => {
-        const user = localStorage.getItem("admin");
+        const user = localStorage.getItem("user");
         return user ? JSON.parse(user) : null;
     });
     useLayoutEffect(() => {
@@ -24,7 +24,7 @@ const Banner = () => {
                         <p className='mb-6'>BEWORK hiện có  mẫu CV chuyên nghiệp và độc đáo</p>
                         <div className='flex items-center justify-between '>
                             {!isLogin ? (
-                                <Link to={`/`} className='flex items-center text-blue-500 rounded-full bg-white gap-1 px-4 py-3' >Tạo cv ngay  <AiOutlineArrowRight /> </Link>
+                                <Link to={`/login`} className='flex items-center text-blue-500 rounded-full bg-white gap-1 px-4 py-3' >Tạo cv ngay  <AiOutlineArrowRight /> </Link>
                             ) : (
                                 <Link to={`/user/listcv`} className='flex items-center text-blue-500 rounded-full bg-white gap-1 px-4 py-3' >Tạo cv ngay  <AiOutlineArrowRight /> </Link>
                             )}
