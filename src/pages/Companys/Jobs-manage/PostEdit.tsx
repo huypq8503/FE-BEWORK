@@ -18,7 +18,6 @@ const PostEdit = () => {
     const [form] = Form.useForm();
     const { data: Infor } = useGetInforQuery();
     const { data: PostData, isLoading } = useGetJobPostByIdCompanyIdQuery(id || "");
-    console.log(PostData);
     const [jobPost, { isLoading: isUpdatePost }] = useEditJobPostMutation();
     const [selectedProvinceId, setSelectedProvincetId] = useState<string | number | null>(null); //lưu id Tỉnh Thành phố
 

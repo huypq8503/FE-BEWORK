@@ -80,7 +80,6 @@ const CandidateInformation = () => {
                     }
                 }
             } catch (error) {
-                console.error(error);
             }
         }
     };

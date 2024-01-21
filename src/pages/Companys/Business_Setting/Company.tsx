@@ -61,7 +61,7 @@ const CompanySetting = React.memo(() => {
                     }
                 }
             } catch (error) {
-                console.log(error);
+                // console.log(error);
             } finally {
                 setUploading(false); // Đặt lại biến uploading thành false khi quá trình tải lên kết thúc
             }

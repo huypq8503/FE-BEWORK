@@ -178,7 +178,6 @@ const JobDetail = React.memo(() => {
                     setImage(Response.data.url);
                 }
             } catch (error) {
-                console.error(error);
             } finally {
                 setUploading(false);
             }

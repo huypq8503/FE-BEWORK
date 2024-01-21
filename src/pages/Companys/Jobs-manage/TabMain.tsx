@@ -27,7 +27,6 @@ const TabMain = () => {
     const defaultQuantity = 10;
     const [searchKeyword, setSearchKeyword] = useState(""); // Trạng thái lưu từ khoá tìm kiếm
     const [originalJobPostData, setOriginalJobPostData] = useState([]); // Trạng thái lưu mảng bài đăng ban đầu
-    console.log(originalJobPostData)
 
     const showModal = (jobId: number) => {
         setSelectedJobId(jobId);
@@ -74,7 +73,6 @@ const TabMain = () => {
                 }
                 // Đóng Modal
                 setIsModalOpen(false);
-                console.log('Received values:', values);
             })
             .catch(() => {
 
@@ -86,7 +84,6 @@ const TabMain = () => {
     };
 
     const handleChange = (value: string) => {
-        console.log(`selected ${value}`);
     };
 
     const columns: ColumnsType<IJobPost> = [

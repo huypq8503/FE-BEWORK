@@ -119,8 +119,6 @@ const Recruitment = React.memo(() => {
     const handleSelectProvinceId = (key: number | string, province: BaseOptionType | DefaultOptionType) => {
         setSelectedProvincetId(key);
         setFilterProvince(province?.children); // Use province object to get the name
-        console.log(province); // Access the id property
-        console.log(selectedProvinceId);
     }
 
     // Thêm hàm để xử lý sự kiện khi giá trị mức lương thay đổi

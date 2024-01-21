@@ -24,7 +24,6 @@ const EditPackage = () => {
             status: packageData?.package?.status,
         });
     }, [packageData]);
-    console.log(status);
 
     if (isLoading) return <Skeleton />
     const onFinish = (values: IPackages) => {

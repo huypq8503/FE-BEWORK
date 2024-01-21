@@ -4,11 +4,11 @@ import { AiOutlineCheckCircle } from 'react-icons/ai';
 
 
 const onFinish = (values: unknown) => {
-    console.log('Success:', values);
+    // console.log('Success:', values);
 };
 
 const onFinishFailed = (errorInfo: unknown) => {
-    console.log('Failed:', errorInfo);
+    // console.log('Failed:', errorInfo);
 };
 
 type FieldType = {

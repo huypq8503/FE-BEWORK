@@ -1,7 +1,17 @@
 import { AiOutlineArrowRight } from "react-icons/ai"
 import SearchJobs from '../../Site/Recruit/SearchJobs';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useLayoutEffect, useState } from "react";
 const Banner = () => {
+    const navigate = useNavigate();
+    const [isLogin] = useState(() => {
+        const user = localStorage.getItem("admin");
+        return user ? JSON.parse(user) : null;
+    });
+    useLayoutEffect(() => {
+        if (!isLogin) return navigate('/')
+    }, [])
+
     return (
         <div className='bg-blue-100/50'>
             <section className=' max-w-screen-xl mx-auto  pb-10 lg:pb-36 pt-10' >
@@ -13,7 +23,11 @@ const Banner = () => {
                         <h2 className='text-xl mb-2'>Tạo CV online ấn tượng</h2>
                         <p className='mb-6'>BEWORK hiện có  mẫu CV chuyên nghiệp và độc đáo</p>
                         <div className='flex items-center justify-between '>
-                            <Link to={`/user/listcv`} className='flex items-center text-blue-500 rounded-full bg-white gap-1 px-4 py-3' >Tạo cv ngay  <AiOutlineArrowRight /> </Link>
+                            {!isLogin ? (
+                                <Link to={`/`} className='flex items-center text-blue-500 rounded-full bg-white gap-1 px-4 py-3' >Tạo cv ngay  <AiOutlineArrowRight /> </Link>
+                            ) : (
+                                <Link to={`/user/listcv`} className='flex items-center text-blue-500 rounded-full bg-white gap-1 px-4 py-3' >Tạo cv ngay  <AiOutlineArrowRight /> </Link>
+                            )}
                             <img src="https://123job.vn/images/recruit/resume.png" width={60} alt="" />
                         </div>
                     </div>

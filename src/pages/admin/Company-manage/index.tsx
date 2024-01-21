@@ -8,7 +8,6 @@ import { useGetcompanysQuery, useUpdateStatuscompanysMutation } from "../../../a
 import React, { useState } from "react";
 const CompanyManage = () => {
     const { data, isLoading, error } = useGetcompanysQuery();
-    console.log(data);
 
     const [updateStatus] = useUpdateStatuscompanysMutation();
     const [modalVisible, setModalVisible] = React.useState(false);

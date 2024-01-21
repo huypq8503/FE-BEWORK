@@ -3,11 +3,11 @@ import { EnterOutlined } from "@ant-design/icons"
 import { Button, Form, Input } from 'antd';
 
 const onFinish = (values: any) => {
-    console.log('Success:', values);
+    // console.log('Success:', values);
 };
 
 const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
+    // console.log('Failed:', errorInfo);
 };
 
 type FieldType = {

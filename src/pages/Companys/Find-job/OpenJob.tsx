@@ -21,7 +21,6 @@ const OpenJob = () => {
     const [selectedCandidateId, setSelectedCandidateId] = useState<string | number | null>(null); // lưu trữ id của ứng viên được chọn
     const { data: detailFind } = useGetFindCandidateByIdQuery(selectedCandidateId || "");
     const [selectedProvinceId, setSelectedProvincetId] = useState<string | number | null>(null);
-    console.log(selectedProvinceId)
     const [openProfile] = useOpenProfileMutation();
     const [saveProfile] = useSaveProfileMutation();
     const [rateProfile] = useRateProfileMutation();
@@ -74,7 +73,6 @@ const OpenJob = () => {
                 message.success("Lưu thành công");
             })
             .catch((error) => {
-                console.log(error.data.error);
                 cancelSaveProfile(id)
                 message.info("Huỷ lưu");
             });
@@ -82,7 +80,6 @@ const OpenJob = () => {
     //Hàm mở modal đánh giá
     const hadleOpenModalRateProfile = (id: number | string | null) => {
         setRatingModalVisible(true)
-        console.log(id);
     }
     //hàm đánh giá ứng viên
     const handleRateProfile = () => {

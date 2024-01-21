@@ -31,7 +31,6 @@ const UpdatePostingPackages = () => {
                 message.success(`Thêm thành công`);
                 navigate("/admin/posting-packages");
             });
-        console.log("Dữ loeuej gửi lên", values)
     };
 
 
