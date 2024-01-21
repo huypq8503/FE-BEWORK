@@ -80,7 +80,7 @@ const UpdatePostingPackages = () => {
                     <CKEditor
                         editor={ClassicEditor}
                         data={listOne?.desc}
-                        onChange={(_event, editor) => {
+                        onChange={(_event: any, editor: any) => {
                             const data = editor.getData();
                             form.setFieldsValue({
                                 desc: data

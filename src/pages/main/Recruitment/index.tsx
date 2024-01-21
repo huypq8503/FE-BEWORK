@@ -37,6 +37,7 @@ const Recruitment = React.memo(() => {
     const [filterExp, setFilterExp] = useState('');
     const [filterSalary, setFilterSalary] = useState('');
     const [selectedProvinceId, setSelectedProvincetId] = useState<string | number | null>(null);
+    console.log(selectedProvinceId);
 
     const pageSize = 12;
     const handlePageChange = (page: number) => {

@@ -324,7 +324,7 @@ const JobCreate = React.memo(() => {
                         >
                             <CKEditor
                                 editor={ClassicEditor}
-                                onChange={(_event, editor) => {
+                                onChange={(_event: any, editor: any) => {
                                     const data = editor.getData();
                                     form.setFieldsValue({
                                         interest: data
@@ -340,7 +340,7 @@ const JobCreate = React.memo(() => {
                         >
                             <CKEditor
                                 editor={ClassicEditor}
-                                onChange={(_event, editor) => {
+                                onChange={(_event: any, editor: any) => {
                                     const data = editor.getData();
                                     form.setFieldsValue({
                                         desc: data
@@ -356,7 +356,7 @@ const JobCreate = React.memo(() => {
                         >
                             <CKEditor
                                 editor={ClassicEditor}
-                                onChange={(_event, editor) => {
+                                onChange={(_event: any, editor: any) => {
                                     const data = editor.getData();
                                     form.setFieldsValue({
                                         requirement: data

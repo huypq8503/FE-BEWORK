@@ -3,11 +3,11 @@ import { Button, Form, InputNumber } from 'antd';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
 
 
-const onFinish = (values: unknown) => {
+const onFinish = () => {
     // console.log('Success:', values);
 };
 
-const onFinishFailed = (errorInfo: unknown) => {
+const onFinishFailed = () => {
     // console.log('Failed:', errorInfo);
 };
 

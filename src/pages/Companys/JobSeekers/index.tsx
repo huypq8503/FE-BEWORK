@@ -19,7 +19,7 @@ const JobSeekers = () => {
     const [form] = Form.useForm();
     const { data } = useGetFindCandidateQuery();
     const { data: Infor } = useGetInforQuery();
-    const [selectedCandidateId, setSelectedCandidateId] = useState<string | number | null>(null); // lưu trữ id của ứng viên được chọn
+    const [selectedCandidateId, setSelectedCandidateId] = useState<any>(null); // lưu trữ id của ứng viên được chọn
     const [showModal, setShowModal] = useState(false);
     const [ratingModalVisible, setRatingModalVisible] = useState(false);
     const [openProfile] = useOpenProfileMutation();
@@ -60,8 +60,9 @@ const JobSeekers = () => {
         setModalVisible(false);
     };
     //Hàm mở modal đánh giá
-    const hadleOpenModalRateProfile = (id: number | string | null) => {
+    const hadleOpenModalRateProfile = (id: any) => {
         setRatingModalVisible(true)
+        console.log(id);
     }
     //hàm đánh giá ứng viên
     const handleRateProfile = () => {
@@ -85,7 +86,7 @@ const JobSeekers = () => {
                 setShowModal(false)
             })
             .catch(error => {
-                // console.error("Form validation error:", error);
+                console.error("Lỗi rồi bạn ơi haha:", error);
             });
     };
     const formatCurrency = (amount: number, currency: string) => {

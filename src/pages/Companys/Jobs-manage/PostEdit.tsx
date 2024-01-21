@@ -356,7 +356,7 @@ const PostEdit = () => {
                         <CKEditor
                             editor={ClassicEditor}
                             data={PostData?.level?.requirement}
-                            onChange={(_event, editor) => {
+                            onChange={(_event: any, editor: any) => {
                                 const data = editor.getData();
                                 form.setFieldsValue({
                                     requirement: data

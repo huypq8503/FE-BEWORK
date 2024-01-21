@@ -2,11 +2,11 @@ import { Link } from "react-router-dom"
 import { EnterOutlined } from "@ant-design/icons"
 import { Button, Form, Input } from 'antd';
 
-const onFinish = (values: any) => {
+const onFinish = () => {
     // console.log('Success:', values);
 };
 
-const onFinishFailed = (errorInfo: any) => {
+const onFinishFailed = () => {
     // console.log('Failed:', errorInfo);
 };
 
