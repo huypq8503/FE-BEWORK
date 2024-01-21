@@ -53,8 +53,9 @@ const Login = React.memo(() => {
             }, 1000);
 
         } catch (error: any) {
-            user()
-            notyf.error(error.data.message)
+            return notyf.error(error.data.message)
+            console.log(user())
+          
         }
     };
 
