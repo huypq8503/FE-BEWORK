@@ -201,11 +201,10 @@ const Recruitment = React.memo(() => {
     };
 
     const handleClearFilterButtonClick = () => {
-        // Xóa tất cả các giá trị lọc và cập nhật state
         setFilterSalary('');
         setFilteredData(filteredJobs);
-        setSelectedProvincetId(null); // Reset giá trị của tỉnh/thành phố
-        setFilterExp(''); // Reset giá trị của quận/huyện
+        setSelectedProvincetId(null);
+        setFilterExp('');
     };
 
     const handleFilterButtonClick = () => {
@@ -225,7 +224,7 @@ const Recruitment = React.memo(() => {
                     </h2>
                     <Link to="/recruit" className='flex items-center gap-2  hover:text-blue-500'>Xem tất cả  <BsArrowRight /></Link>
                 </div>
-                <div className="flex gap-4 text-sm my-4">
+                <div className="flex gap-4 overflow-x-auto whitespace-nowrap  text-sm my-4">
                     <Select
                         placeholder="Chọn địa chỉ"
                         className="h-[37px] w-40"
@@ -261,7 +260,7 @@ const Recruitment = React.memo(() => {
                         <option value="9">Trên 40 triệu</option>
                     </select>
 
-                    <button className="bg-blue-600 text-white flex items-center rounded-md px-3" onClick={handleFilterButtonClick}>
+                    <button className="bg-blue-600  text-white flex items-center rounded-md px-3" onClick={handleFilterButtonClick}>
                         <AiOutlineFilter className="text-lg" />
                         <p>Lọc</p>
                     </button>

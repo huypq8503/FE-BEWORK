@@ -236,7 +236,7 @@ const JobDetail = React.memo(() => {
             phone: user?.phone
         })
         window.scrollTo(0, 0);
-    }, [user?.name, user?.email, user?.phone, reset])
+    }, [reset])
 
 
     if (isLoading) return <Skeleton loading />
