@@ -224,7 +224,7 @@ const Footer = React.memo((dataFooter: any) => {
                                             />
                                         </svg>
 
-                                        <span className="flex-1 text-gray-900"> Zalo/Phone: {listINfo?.phone} - Đinh Văn Thản</span>
+                                        <span className="flex-1 text-gray-900"> Zalo/Phone: {listINfo?.phone} - Anh Phạm Quang Huy</span>
                                     </a>
                                 </li>
 
@@ -246,7 +246,7 @@ const Footer = React.memo((dataFooter: any) => {
                                         />
                                     </svg>
                                     <address className="-mt-0.5 flex-1 not-italic text-gray-900">
-                                        Liên hệ hợp tác:  {listINfo?.sdt_lienhe} - Anh Thản
+                                        Liên hệ hợp tác:  {listINfo?.sdt_lienhe} - Anh Phạm Quang Huy
                                     </address>
                                 </li>
                             </ul>

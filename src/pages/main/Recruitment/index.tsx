@@ -285,7 +285,7 @@ const Recruitment = React.memo(() => {
                                             <img src={item?.logo} className='border rounded-md p-2' width={70} />
                                             {item?.id_type_job_post === 2 ? <div className='text-yellow-500 text-2xl;'><RiVipCrown2Line /></div> : ""}
                                             <div>
-                                                <Link to="/">
+                                                <Link to={`/job-detail/${slug}/${item?.id}`} key={item?.id}>
                                                     {item?.id_type_job_post === 2 ? (
                                                         <p className='text-red-500 font-semibold text-lg'>{item?.title}</p>
                                                     ) : (
