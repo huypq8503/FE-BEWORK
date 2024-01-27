@@ -175,7 +175,7 @@ const TabNew = React.memo(({ isJobSaved, onSaveJob, onCancelSaveJob }: any) => {
             phone: user?.phone
         })
         window.scrollTo(0, 0);
-    }, [user?.name, user?.email, user?.phone, reset])
+    }, [reset])
     // if (isLoading) return <Skeleton />
     return (
         <div className='grid grid-cols-3 gap-4'>

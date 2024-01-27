@@ -44,5 +44,5 @@ const jobPostApply = createApi({
   }),
 });
 export const { useApplyJobMutation, useGetJobApplyQuery } = jobPostApply;
-export default jobPostApply;
 export const JobPostApplyReducer = jobPostApply.reducer;
+export default jobPostApply;

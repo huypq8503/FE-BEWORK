@@ -4,7 +4,7 @@ const Reviews = () => {
     return (
         <section>
             <h2 className='text-xl md:text-2xl mt-10 my-5'><span className='text-blue-500'>BEWORK</span>  có thể giúp bạn những gì?</h2>
-            <div className='grid grid-cols-3 gap-4 mt-10'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10'>
                 <div className='shadow-xl p-5 mb-8'>
                     <img
                         src="https://www.123job.vn/images/recruit/find_job.png"

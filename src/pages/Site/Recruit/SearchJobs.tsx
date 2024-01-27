@@ -63,7 +63,7 @@ const SearchJobs = ({ onSearchDataChange }: any) => {
                 ))}
             </Select>
             <button
-                className="bg-blue-600 px-10 lg:my-7 lg:ml-2 rounded-full text-white font-semibold w-full lg:w-auto py-3"
+                className="bg-blue-600 px-10 mt-5 lg:my-7 lg:ml-2 rounded-full text-white font-semibold w-full lg:w-auto py-3"
                 type="button"
                 onClick={handleSearchButtonClick}
             >

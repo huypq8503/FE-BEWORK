@@ -106,7 +106,7 @@ const Recruit = () => {
         <div className='max-w-screen-xl mx-auto'>
             <SearchJobs onSearchDataChange={handleSearchDataChange} />
             <div>
-                <div className='flex items-center my-4 gap-8'>
+                <div className='flex overflow-x-auto whitespace-nowrap items-center my-4 gap-8'>
                     <Select
                         placeholder="--Số năm kinh nghiệm--"
                         className="h-[37px] w-44"
@@ -138,7 +138,7 @@ const Recruit = () => {
             </div>
 
             <hr className='py-4' />
-            <div className='grid grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-8'>
                 <div className='col-span-2'>
                     <h2 className='font-semibold text-xl'>Tuyển dụng </h2>
                     <p className='py-4'>
@@ -154,13 +154,12 @@ const Recruit = () => {
                         return (
                             <Spin key={item?.id} spinning={isLoading}>
                                 < ul >
-                                    <div className='grid grid-cols-5 mx-10 py-4 my-4 px-2 shadow-3xl rounded leading-7' >
+                                    <div className='grid lg:grid-cols-5 mx-10 py-4 my-4 px-2 shadow-3xl rounded leading-7' >
                                         <Link to={`/job-detail/${slug}/${item?.id}`}>
                                             {item?.logo == null ? (
-                                                <img src="https://res.cloudinary.com/dxzlnojyv/image/upload/v1700359570/glf34tttyauwoqpkbggt.png" alt="" className='w-28 h-28' />
+                                                <img src="https://res.cloudinary.com/dxzlnojyv/image/upload/v1700359570/glf34tttyauwoqpkbggt.png" alt="" className='w-28 h-28 hidden md:block' />
                                             ) : (
-
-                                                <img src={`${item?.logo}`} className='h-28 w-28' alt="" />
+                                                <img src={`${item?.logo}`} className='h-28 hidden md:block w-28' alt="" />
                                             )}
                                         </Link>
 
