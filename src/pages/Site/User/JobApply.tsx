@@ -6,6 +6,7 @@ import { VND } from '../../../components/upload';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TbStatusChange } from 'react-icons/tb';
+import slugify from 'slugify';
 
 const JobApply = React.memo(() => {
     const { data, isLoading } = useGetJobApplyQuery();
@@ -30,11 +31,12 @@ const JobApply = React.memo(() => {
                 <div className='w-[800px] rounded'>
                     <h2 className='text-2xl font-semibold'>Việc làm đã ứng tuyển</h2>
                     {displayedJobs?.map((item: any) => {
+                        const slug = slugify(item?.title, { lower: true });
                         return (
                             <div key={item?.id} className='mt-5 grid grid-cols-[30%,70%] items-center gap-5 border mb-5 w-full  shadow-sm shadow-blue-300 h-auto py-4 px-5 '>
                                 <img src={item?.logo} alt="Anh logo" width={210} />
                                 <div>
-                                    <Link to={`/job-detail/${item?.title}/${item?.id}`} className='text-xl font-semibold'>{item?.title}</Link>
+                                    <Link to={`/job-detail/${slug}/${item?.id}`} key={item?.id} className='text-xl font-semibold'>{item?.title}</Link>
                                     <div className='flex gap-2 items-center text-lg'> {item?.company_name}</div>
                                     <p className='flex gap-2 items-center my-1'> <i><i><CiLocationOn /> </i></i>{item?.province} -  {item?.district}</p>
                                     <p className='flex items-center gap-2'><i><MdOutlineAttachMoney /></i> {VND.format(item?.min_salary)} - {VND.format(item?.max_salary

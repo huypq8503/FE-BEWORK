@@ -8,6 +8,7 @@ import { VND } from '../../../components/upload'
 import React, { useState } from 'react'
 import { Notyf } from 'notyf'
 import { useGetInfoUserQuery } from '../../../api/auths'
+import slugify from 'slugify';
 
 const JobFavor = React.memo(() => {
     const notyf = new Notyf({
@@ -61,15 +62,15 @@ const JobFavor = React.memo(() => {
                 <div>
                     <div className='   w-[800px] h-auto grid gap-5'>
                         {displayedJobs?.map((item: any) => {
-
+                            const slug = slugify(item?.title, { lower: true });
                             return (
                                 <div key={item?.id}>
                                     <div className='border p-3 rounded  '>
-                                        <Link to={`/job-detail/${item?.title}/${item?.id}`} key={item?.id}>
+                                        <Link to={`/job-detail/${slug}/${item?.id}`} key={item?.id}>
                                             <div className='flex gap-2'>
                                                 <img src={item?.logo} className='border rounded-md p-2' width={70} />
                                                 <div>
-                                                    <Link to="/">
+                                                    <Link to={`/job-detail/${slug}/${item?.id}`} key={item?.id}>
                                                         <p className='text-slate-500 font-semibold text-lg'>{item?.title}</p>
                                                     </Link>
                                                     <p className='text-lg'>{item?.company_name}</p>
@@ -85,7 +86,7 @@ const JobFavor = React.memo(() => {
                                                 <AiFillHeart />
                                             </button>
                                         </div>
-                                        <Link to={`/job-detail/${item?.title}/${item?.id}`} className='px-2 py-2 bg-blue-500 text-white rounded-md'>Xem chi tiết</Link>
+                                        <Link to={`/job-detail/${slug}/${item?.id}`} key={item?.id} className='px-2 py-2 bg-blue-500 text-white rounded-md'>Xem chi tiết</Link>
                                     </div>
                                 </div>
                             );
