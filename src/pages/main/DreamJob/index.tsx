@@ -21,7 +21,7 @@ const DreamJob = () => {
                         />
                         <div className='rounded-xl bg-blue-200 p-5 shadow-xl'>
                             <p className='text-6xl text-blue-400 flex justify-end '>01</p>
-                            <Link to="">
+                            <Link to={`/login`}>
                                 <h4 className='text-center font-semibold text-xl my-5 hover:text-blue-500' >Đăng ký tài khoản</h4>
                             </Link>
                             <span className='font-sans '>Tạo tài khoản để tìm kiếm công việc dễ dàng, nhanh chóng và phù hợp nhất.</span>
@@ -35,7 +35,7 @@ const DreamJob = () => {
                         />
                         <div className='rounded-xl bg-orange-200 p-5 shadow-xl'>
                             <p className='text-6xl text-orange-500 flex justify-end '>02</p>
-                            <Link to="">
+                            <Link to={`/recruit`}>
                                 <h4 className='text-center font-semibold text-xl my-5 hover:text-orange-500' >Tìm kiếm công việc</h4>
                             </Link>
                             <span className='font-sans '>Tìm kiếm những vị trí công việc tốt nhất và phù hợp với kỹ năng của bạn.</span>

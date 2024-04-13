@@ -58,7 +58,7 @@ const Payment = () => {
         {
             title: 'Mô tả',
             dataIndex: 'note',
-            render: (record: any) => <p>{record.note}</p>,
+            render: (_text, record: any) => <p>{record.note}</p>,
         },
         {
             title: 'Số xu',
