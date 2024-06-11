@@ -5,7 +5,7 @@ const PackagesCompanyApi = createApi({
   reducerPath: "Package",
   tagTypes: ["Package"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://api.beworkhappycat.id.vn/api/company",
+    baseUrl: "https://be.beworkhappycat.id.vn/api/company",
     prepareHeaders: (headers) => {
       const localStorageToken = localStorage.getItem("authCompany");
       if (localStorageToken) {

@@ -16,7 +16,7 @@ const SignUp = React.memo(() => {
         },
     });
     // const loginGoogle = () => {
-    //     window.location.href = "https://api.beworkhappycat.id.vn/api/auth/google"
+    //     window.location.href = "https://be.beworkhappycat.id.vn/api/auth/google"
     // }
     const { register, handleSubmit, formState: { errors } } = useForm<FormSignup>({
         resolver: yupResolver(schemaSignup)

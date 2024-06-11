@@ -13,7 +13,7 @@ const JobPostCompanyApi = createApi({
   reducerPath: "job_post",
   tagTypes: ["job_post"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://api.beworkhappycat.id.vn/api",
+    baseUrl: "https://be.beworkhappycat.id.vn/api",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("authCompany");
       if (token) {

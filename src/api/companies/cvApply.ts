@@ -4,7 +4,7 @@ const CvApplyApi = createApi({
   reducerPath: "cV_apply",
   tagTypes: ["CV_apply"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://api.beworkhappycat.id.vn/api",
+    baseUrl: "https://be.beworkhappycat.id.vn/api",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("authCompany");
       if (token) {
