@@ -19,7 +19,7 @@ export interface AuthSignin {
 const authCompaniesApi = createApi({
   reducerPath: "company",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://be.beworkhappycat.id.vn/api",
+    baseUrl: "https://beworkhappycat.id.vn/api",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("authCompany");
       if (token) {

@@ -14,7 +14,7 @@ export interface AuthSignin {
 const authCompaniesApi = createApi({
   reducerPath: "company",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://be.beworkhappycat.id.vn/api/company",
+    baseUrl: "https://beworkhappycat.id.vn/api/company",
   }),
   endpoints: (builder) => ({
     signupCompanies: builder.mutation<
@@ -22,7 +22,7 @@ const authCompaniesApi = createApi({
       AuthSignup
     >({
       query: (account) => ({
-        url: "https://be.beworkhappycat.id.vn/api/company/",
+        url: "https://beworkhappycat.id.vn/api/company/",
         method: "POST",
         body: account,
       }),

@@ -4,7 +4,7 @@ const FindJobCompanyApi = createApi({
   reducerPath: "findJobs",
   tagTypes: ["FindJobs"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://be.beworkhappycat.id.vn/api",
+    baseUrl: "https://beworkhappycat.id.vn/api",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("authCompany");
       if (token) {

@@ -4,7 +4,7 @@ const searchApi = createApi({
   reducerPath: "search",
   tagTypes: ["search"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://be.beworkhappycat.id.vn/api/",
+    baseUrl: "https://beworkhappycat.id.vn/api/",
     fetchFn: (...args) => fetch(...args),
   }),
   endpoints: (builder) => ({

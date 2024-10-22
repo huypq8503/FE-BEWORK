@@ -4,7 +4,7 @@ const authGooleApi = createApi({
   reducerPath: "authGoogle",
   tagTypes: ["AuthGoogle"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://be.beworkhappycat.id.vn/api",
+    baseUrl: "https://beworkhappycat.id.vn/api",
     fetchFn: (...arg) => {
       return fetch(...arg);
     },
